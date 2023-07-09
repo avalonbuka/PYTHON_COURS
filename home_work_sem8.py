@@ -12,7 +12,7 @@ def show_data(filename):
         print("")
 
 # Записывает информацию в файл
-def export_data(filename):
+def write_data(filename):
     with open(filename, "r", encoding="utf-8") as data:
         tel_file = data.read()
         num = len(tel_file.split("\n"))
@@ -25,7 +25,7 @@ def export_data(filename):
 # Изменяет информацию из файла
 def edit_data(filename):
     print('\n ПП | ФИО | Телефон')
-    with open(filename, 'r', encoding='utf-8') as data:
+    with open(filename, "r", encoding="utf-8") as data:
         tel_book = data.read()
         print(tel_book)
         print("")
@@ -72,7 +72,7 @@ def main():
     while my_choice != 0:
         print("Выберите одно из действий: ")
         print("1 — Вывести инфо на экран")
-        print("2 — Произвести экпорт данных")
+        print("2 — Внести нове данные")
         print("3 — Произвести изменение данных")
         print("4 — Произвести удаление данных")
         print("0 — Выход из программы")
@@ -80,7 +80,7 @@ def main():
         if action == 1:
             show_data(file_tel)
         elif action == 2:
-            export_data(file_tel)
+            write_data(file_tel)
         elif action == 3:
             edit_data(file_tel)
         elif action == 4:
@@ -88,7 +88,7 @@ def main():
         else:
             my_choice = 0
 
-            print("До свидания")
+            print("Вы вышли из программы")
 
-            if __name__ == "__main__":
-                main()
+if __name__ == "__main__":
+    main()
