@@ -66,8 +66,8 @@ def main():
     file_tel = "tel.txt"
 
 # # Создает файл если его нет в папке
-#     with open(file_tel, "a", encoding="utf-8") as file:
-#         file.write("")
+    with open(file_tel, "a", encoding="utf-8") as file:
+        file.write("")
 
     while my_choice != 0:
         print("Выберите одно из действий: ")
